@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rock Paper Scissors</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Title -->
+    <h1 class="title">Rock Paper Scissors</h1>
+    <p class="subtitle">Choose your weapon and beat the computer!</p>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+      <div class="score-box">
+        <span class="score-label">You</span>
+        <span id="userScore" class="score-value">0</span>
+      </div>
+      <div class="score-box vs">VS</div>
+      <div class="score-box">
+        <span class="score-label">Computer</span>
+        <span id="computerScore" class="score-value">0</span>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-item">
+        <span class="stat-label">Wins</span>
+        <span id="winsCount" class="stat-value win-color">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Losses</span>
+        <span id="lossesCount" class="stat-value lose-color">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Draws</span>
+        <span id="drawsCount" class="stat-value draw-color">0</span>
+      </div>
+    </div>
+
+    <!-- Round Info -->
+    <div class="round-info">
+      <span>Round: <strong id="roundNumber">0</strong></span>
+      <span>Total Played: <strong id="totalRounds">0</strong></span>
+    </div>
+
+    <!-- Choices -->
+    <div class="choices">
+      <button class="choice-btn" data-choice="Rock">
+        <span class="choice-icon">✊</span>
+        <span class="choice-text">Rock</span>
+      </button>
+      <button class="choice-btn" data-choice="Paper">
+        <span class="choice-icon">📄</span>
+        <span class="choice-text">Paper</span>
+      </button>
+      <button class="choice-btn" data-choice="Scissors">
+        <span class="choice-icon">✂️</span>
+        <span class="choice-text">Scissors</span>
+      </button>
+    </div>
+
+    <!-- Battle Display -->
+    <div class="battle-display">
+      <div class="player-box">
+        <p class="player-label">You Chose</p>
+        <div id="userChoiceIcon" class="battle-icon">❔</div>
+      </div>
+      <div class="battle-vs">⚡</div>
+      <div class="player-box">
+        <p class="player-label">Computer Chose</p>
+        <div id="computerChoiceIcon" class="battle-icon">❔</div>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="resultDisplay" class="result-display">
+      Make your move to start playing!
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="resetBtn" class="control-btn reset-btn">Reset Game</button>
+    </div>
+
+    <!-- History -->
+    <div class="history-card">
+      <div class="history-header">
+        <h2>Game History</h2>
+        <button id="clearHistoryBtn" class="clear-history-btn">Clear History</button>
+      </div>
+      <div id="historyList" class="history-list">
+        <p class="history-empty">No rounds played yet. Your history will appear here.</p>
+      </div>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
